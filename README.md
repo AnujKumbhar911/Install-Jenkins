@@ -48,3 +48,10 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ====How to Access jenkins==
 http://publicip:8080/
 
+=======Configure Java==========
+echo "export JAVA_HOME=$(readlink -f /usr/bin/java | sed 's:/bin/java$::')" >> ~/.bashrc
+source ~/.bashrc
+nano ~/.bashrc
+export PATH=$PATH:$JAVA_HOME/bin
+source ~/.bashrc
+
