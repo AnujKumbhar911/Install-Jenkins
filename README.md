@@ -1,6 +1,6 @@
 # Install-Jenkins
 
-###Commands to install Jenkins on amazon linux (Amazon Linux 2) ec2 instance:
+##Commands to install Jenkins on amazon linux (Amazon Linux 2) ec2 instance:
 
 Create Amazon Ec2 instance
 ===Upgrade the OS====
