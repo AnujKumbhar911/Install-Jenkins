@@ -55,3 +55,46 @@ nano ~/.bashrc
 export PATH=$PATH:$JAVA_HOME/bin
 source ~/.bashrc
 
+
+
+==========================================================
+1) Jenkins installation on ec2 instance
+2) Adding Jenkins user to visudofile
+3) Global tool config:
+  manage jenkins -->Global tool config--> git, mvn, java, docker
+4) manage plugins
+5) Jenkins CLI:
+   Home dir: /var/lib/jenkins
+   log dir: /var/log/jenkins/jenkins.log
+   how to restart jenkins: service jenkins restart
+6) Jenkins Job:
+   freestyle
+   maven project
+   pipeline
+   folder
+   multibranch
+7) Trigger in jenkins job:
+   -build periodically cron tab setting (*/1 * * * *)
+   -poll scm (if there is any change in source code)
+   -github-webhook for gitscm polling
+
+extension of jenkins: .jpi
+
+
+=============================================================
+Troubleshooting jenkins:
+1)check jenkins process:
+  #ps -ef | grep jenkins: (we get pid and port number)
+2) Check logs: based on logs
+  #tail -f /var/log/jenkins/jenkins.log
+3)Check security group of jenkins instance
+
+
+
+
+Log labels:
+--info
+--warning
+--debug
+--error
+
