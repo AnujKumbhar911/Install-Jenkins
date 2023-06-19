@@ -98,3 +98,15 @@ Log labels:
 --debug
 --error
 
+===================================================================
+Credentials:
+
+in jenkins master go to:
+manage jenkins >> credentials >> system >> Global credential >> 
+
+username: github username
+password: github token
+id: name from cred
+
+=====================================================================
+
