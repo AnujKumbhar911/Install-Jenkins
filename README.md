@@ -134,7 +134,7 @@ Secret text: dockerhub password
 
 ecr:
 type: AWS credentials:
-id: aws-ecr-cred
+id: aws-ecr-credentials
 create a user in aws for ecr-user >> go to security credentials >> create a access key >> third party access >> you get accesskey and secret access key
 
 nexus:
@@ -147,6 +147,20 @@ add credentials for nexus in jenkins
 Sonarqube:
 type: secret text
 Add the global credentials with the token which is earlier generated while creating the user jenkins in SonarQube.
+
+=====================================================================
+
+login to aws:
+to login to ecr repository and perform psh and tag cmds from a jenkins server you need to have access to aws account
+    go to aws account:
+    create a user and create a access key with cli 
+    go to server and type aws configure
+    access key:
+    secret access key:
+    default region name:
+    default output:
+
+{here default region name should match with the region name in pipeline or if you skip above step of not aws configure then in pipeline execution even though you have provided id: aws-ecr-credentials in credentials of jenkins server then too pipeline wont be able to access id: aws-ecr-credentials due to default region not specified}
 
 =====================================================================
 
