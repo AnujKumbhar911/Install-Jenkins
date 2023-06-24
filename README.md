@@ -62,18 +62,34 @@ source ~/.bashrc
 2) Adding Jenkins user to visudofile
 3) Global tool config:
   manage jenkins -->Global tool config--> git, mvn, java, docker
-4) manage plugins
-5) Jenkins CLI:
+
+    Java:
+       echo $JAVA_HOME
+   Git:
+       which git
+   Maven:
+       echo $M2_HOME
+   docker
+       install automatically
+   
+5) manage plugins
+     git
+     docker
+     maven
+     ecr
+     Nexus Artifact Uploader
+     SonarQube ScannerVersion
+7) Jenkins CLI:
    Home dir: /var/lib/jenkins
    log dir: /var/log/jenkins/jenkins.log
    how to restart jenkins: service jenkins restart
-6) Jenkins Job:
+8) Jenkins Job:
    freestyle
    maven project
    pipeline
    folder
    multibranch
-7) Trigger in jenkins job:
+9) Trigger in jenkins job:
    -build periodically cron tab setting (*/1 * * * *)
    -poll scm (if there is any change in source code)
    -github-webhook for gitscm polling
