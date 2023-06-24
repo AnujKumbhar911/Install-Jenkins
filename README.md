@@ -120,9 +120,33 @@ Credentials:
 in jenkins master go to:
 manage jenkins >> credentials >> system >> Global credential >> 
 
-username: github username
-password: github token
-id: name from cred
+Git:
+type: usernamewithpassword
+username: github username (AnujKumbhar911)
+password: github token (go to general settings:>> developer settings>> personal access token
+
+id: name from cred (	github_cred)
+
+Dockerhub:
+type: Secret text
+id: dockerhub_cred
+Secret text: dockerhub password
+
+ecr:
+type: AWS credentials:
+id: aws-ecr-cred
+create a user in aws for ecr-user >> go to security credentials >> create a access key >> third party access >> you get accesskey and secret access key
+
+nexus:
+add credentials for nexus in jenkins
+ type: username with password
+ username:admin
+ pwd:admin
+ id: nexus-credentials
+
+Sonarqube:
+type: secret text
+Add the global credentials with the token which is earlier generated while creating the user jenkins in SonarQube.
 
 =====================================================================
 
