@@ -152,7 +152,7 @@ Add the global credentials with the token which is earlier generated while creat
 
 master Slave configuration:
 1) Create a new jenkins slave ec2
-2) install javaand maven
+2) install java and maven
 3) ssh jenkins slave # Create user and add the user to wheel group
     useradd jenkins-slave-01
 4)# Create SSH Keys
@@ -180,9 +180,12 @@ ssh-keygen -t rsa -N "" -f /home/jenkins-slave-01/.ssh/id_rsa
      Remote root directory: /home/jenkins-slave-01
      launch method: launch ssh agent via ssh
          host: (pvt ip of slave) 172.31.2.98
-         cred: add a new cred :
+         cred: add a new cred :>>
+                 type: ssh with private key
+                 username: jenkins-slave-01
+         
              go to slave and follow:
-             cd /home/jenkins-slave-02/.ssh
+             cd /home/jenkins-slave-01/.ssh
              cat id_rsa and copy entire key and add it to private key in private key with ssh and username jenkins-slave-01
              -----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEA0/Mgf2FkEExuufMeZ8APwbOsBqo9NNnLq5EMCIcqd8/X94ir
@@ -198,7 +201,7 @@ QmpRf2ECgYBn8UZDw0zZt59yk62Sp6mXCHk26h0XOcaVVeWR3yvwqLA9kTJBWo4S
 JCsrL7rHO/JiApsUjgNmijV8OS6ehUNvh8r3AMq9i/cKZUP12p+YjFeglG4+AdFd
 +WdbYkRJyo75g5QXXn79j5I/LES2WDT2LDuBTFbPIO6045oH+sf0EA==
 -----END RSA PRIVATE KEY-----
-
+add cred
 
 new node is configured
 ===============================================================================
